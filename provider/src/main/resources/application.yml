@@ -1,0 +1,21 @@
+spring:
+  dubbo:
+    application:
+      name: provider
+    registry:
+      address: multicast://224.5.6.7:1234
+    protocol:
+      name: dubbo
+      port: 20880
+    scan: com.cy.dubbo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jtsys?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8082
